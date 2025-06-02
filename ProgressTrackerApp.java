@@ -15,23 +15,23 @@ class Student {
 
         // encapsulation is bringing related methods and classes within one single classes (encapsulated within a single class) and in it comes data hiding and i've achieved that by using 'protected' keyword.
 
-        void printStudentName (String topper, int rank) { // polymorphism implemented : where one methods can have different behaiors but they should have different parameters...
+        void printStudentName (String name) { // polymorphism implemented : where one methods can have different behaiors but they should have different parameters...
             System.out.println("This student got the 1st Rank in the class: ");
     }
 
-        void printStudentName(String str) {
+        void printStudentName(String name, int rank) {
             System.out.println("Name: " + this.studentName);
         }
 
-        void rollNo(String str) {
+        void rollNo() {
             System.out.println("Name: " + this.rollNo);
         }
 
-        void printSchool(String str) {
+        void printSchool() {
             System.out.println("School: " + this.school);
         }
 
-        void printStudentEmail(String str) {
+        void printStudentEmail() {
             System.out.println("Email ID: " + this.studentEmail);
         }
     }
@@ -41,15 +41,15 @@ class Student {
         String gradeName;
         String section;
 
-        void printCourseName(String str) {
+        void printCourseName() {
             System.out.println("Course Name: " + courseName);
         }
 
-         void gradeName(String str) {
+         void gradeName() {
             System.out.println("Course Name: " + gradeName);
         }
 
-         void printSection(int integer) {
+         void printSection() {
             System.out.println("Course Name: " + section);
         }
 
@@ -58,8 +58,11 @@ class Student {
 public class ProgressTrackerApp { //main class
     public static void main(String[] args) { //main method
 
-       /*  Student theTopper = new Student();
-        theTopper.topper = "Student Nazish has topped in 12th Grade"; */
+        /*Student theTopper = new Student();
+        theTopper.topper = "Student Nazish has topped in 12th Grade";
+
+        theTopper.printTopperStudent(); */
+
 
         StudentDetails sd1 = new StudentDetails(); // creating objects and self-bulit constructors to access the class's properties...
         sd1.studentName = "Nazish Jehangir";
@@ -67,12 +70,18 @@ public class ProgressTrackerApp { //main class
         sd1.school = "Vijay Mandir Sr. Sec. School";
         sd1.studentEmail = "nj@gmail.com";
 
-       // printStudentName(); // calling methods 
-
         Course c1 = new Course();
         c1.courseName = "Science";
         c1.gradeName = "12th";
         c1.section = "A";
+
+        System.out.println(sd1.studentName);
+        sd1.rollNo();
+        sd1.printSchool();
+
+        c1.printCourseName();
+        c1.printSection();
+        c1.gradeName();
 
         System.out.println("================================");
 
@@ -87,6 +96,14 @@ public class ProgressTrackerApp { //main class
         c2.gradeName = "11th";
         c2.section = "A";
 
+        System.out.println(sd2.studentName);
+        sd2.rollNo();
+        sd2.printSchool();
+
+        c2.printCourseName();
+        c2.printSection();
+        c2.gradeName();
+
         System.out.println("================================");
 
         StudentDetails sd3 = new StudentDetails();
@@ -99,6 +116,14 @@ public class ProgressTrackerApp { //main class
         c3.courseName = "Commerce";
         c3.gradeName = "12th";
         c3.section = "A";
+
+        System.out.println(sd2.studentName);
+        sd3.rollNo();
+        sd3.printSchool();
+
+        c3.printCourseName();
+        c3.printSection();
+        c3.gradeName();
 
         System.out.println("================================");
 
@@ -113,6 +138,14 @@ public class ProgressTrackerApp { //main class
         c4.gradeName = "11th";
         c4.section = "B";
 
+        System.out.println(sd2.studentName);
+        sd4.rollNo();
+        sd4.printSchool();
+
+        c4.printCourseName();
+        c4.printSection();
+        c4.gradeName();
+
         System.out.println("================================");
 
         StudentDetails sd5 = new StudentDetails();
@@ -125,6 +158,14 @@ public class ProgressTrackerApp { //main class
         c5.courseName = "Commerce";
         c5.gradeName = "12th";
         c5.section = "B";
+
+        System.out.println(sd2.studentName);
+        sd5.rollNo();
+        sd5.printSchool();
+
+        c5.printCourseName();
+        c5.printSection();
+        c5.gradeName();
 
         System.out.println("================================");
         
